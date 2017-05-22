@@ -1,0 +1,117 @@
+Desenvolvimento de Apis com Nodejs
+***********************************
+
+- Nodejs
+- Mongodb - Banco de dados não relacional mongodb.com instalar mongodb
+- Mongoose - È um package manager do mongodb, npm i mongoose
+
+Conceitos de uma Api
+*********************
+
+* HTTP
+- Protocolo
+- Definições de mensageria
+
+* API
+- Interface de programação de aplicações
+- Conjunto de mensagens
+- Composta por funções e rotinas
+
+* REST
+- Abstração da arquitetura WEB
+- Utiliza-se o HTTP como base
+- Vários tipos de resposta, ex: JSON e XML
+
+Configurando o projeto
+***********************
+
+- npm init
+- npm i --save morgan, responsavel pelo logger da aplicação pelo terminal
+- npm i --save body-parser, responsável por fazer o parser das nossas respostas para json
+- npm i --save express
+- npm i --save mongoose, responsável pela persistencia de dados no banco mongodb
+- touch index.js
+- touch app.js
+
+Entendendo melhor as rotas
+**************************
+
+- Strings patterns, são a capacidade de usar expressões regulares em rotas onde o express consegue
+  fazer o math adequado para esse tipo de chamada
+
+- Fazendo varios tipos de testes, verifica doc express guia Routing
+
+Interface de retorno de request
+*******************************
+
+- Express contem varios tipos de retornos, ver do, o mais usado é o JSON
+- Instalando suporte a retorno de xml
+- npm i xml2js --save
+
+Falando sobre CORS
+******************
+
+- Baixando pacote cors
+- npm i --save cors
+
+Montando um Crud de produto - C
+********************************
+
+- mkdir products/entity - sera o schema do mongo
+
+Montando Crud de produto - R
+******************************
+
+- Foi feito o findById se existe o id no parametro se não ele faz o findAll
+
+Montando crud de produto - U
+****************************
+
+- Criado findById para buscar o produto atualizados para depois fazer o update
+
+Montando crud de produto - R
+*****************************
+
+- Remoção do produto
+
+Criando carrinho de compra - Adicionando
+****************************************
+
+* Responsavel por add e remover itens do carrinho
+- mkdir shopping
+- mkdir shopping/entity, shopping/service, index.js
+
+* Responsável pela venda em si
+- mkdir purchase
+- mkdir purchase/entity, mkdir purchase/service, index.js
+
+- Em post shopping/ passar um array com os ids dos produtos
+- ex:
+{
+
+	"products": [
+
+			"5921aacf21240b2963b7bba6",
+			"5921c24bed6c7031365076a3"
+
+		]
+}
+
+Criando carrinho de compra - Listando
+**************************************
+
+- Feito rota para listar todos os produtos
+
+Criando carrinho de compra - Deletar
+*************************************
+
+ Parametros
+- tabela shopping
+- id tabela shopping
+- id produtoid da tabela shopping
+- /shopping/5921c350ed6c7031365076a4/5921aacf21240b2963b7bba6
+
+Fazendo compra
+***************
+
+- 
